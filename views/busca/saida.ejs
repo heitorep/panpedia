@@ -28,19 +28,26 @@
         <p>></p>
         <a>Busca</a>
     </div>
-    <!-- Exibição da lista de filtros -->
     <div class="conteudo">
-    <div class="resultados">
-    <% if (model.length > 0) { %>
-        <% for (const saidas of model) { %>
-            <div class="resultadoItem">
-                <a href="/busca/<%= permissao %>/saida/0/campos?ID_DADOS_TABELAS=<%= saidas.ID_DADOS_TABELAS%>&TABELA=<%= saidas.TABELA%>"><h2><%= saidas.TABELA %></h2></a>
-                <p><%= saidas.CONTEUDO_TABELA %></p>
-            </div>
-        <% } %>
-    <% } else { %>
-        <h2>Sem resultados encontrados para sua busca :(</h2>
-    <% } %>
+        <div class="resultados">
+            <% if (model.length > 0) { %>
+                <% for (const saidas of model) { %>
+                    <!-- Início do link -->
+                    <a href="/busca/<%= permissao %>/saida/0/campos?ID_DADOS_TABELAS=<%= saidas.ID_DADOS_TABELAS%>&TABELA=<%= saidas.TABELA%>">
+                        <!-- Início da div resultadoItem -->
+                        <div class="resultadoItem">
+                            <h2><%= saidas.TABELA %></h2>
+                            <p><%= saidas.CONTEUDO_TABELA %></p>
+                        </div>
+                        <!-- Fim da div resultadoItem -->
+                    </a>
+                    <!-- Fim do link -->
+                <% } %>
+            <% } else { %>
+                <h2>Sem resultados encontrados para sua busca :(</h2>
+            <% } %>
+        </div>
+    </div>
     <!-- divide todos os resultados da pesquisa em mais páginas -->
     <% if (model.length > 9) { %>
     <div class="paginacao">
