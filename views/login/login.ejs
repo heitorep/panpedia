@@ -1,0 +1,48 @@
+<!-- Definição do tipo de documento HTML e configuração do idioma -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <!-- Meta tag para codificação de caracteres -->
+    <meta charset="UTF-8">
+    <!-- Meta tag para compatibilidade com o Internet Explorer -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Meta tag para ajuste de escala em dispositivos móveis -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Inclui o arquivo CSS para estilização da página de login -->
+    <link rel="stylesheet" href="/public/css/styleLogin.css">
+    <!-- Inclui a biblioteca jQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js" crossorigin="anonymous"></script>
+    <!-- Inclusão do arquivo Javascript externo -->
+    <script src="/public/js/script.js"></script>
+    <!-- Define o ícone da página -->
+    <link rel="short icon" href="/public/images/123.png" type="image/x-icon">
+    <!-- Define o título da página -->
+    <title>Panpedia</title>
+</head>
+
+<body>
+    
+      <!-- Logo miniatura do Banco Pan -->
+       <img class="logo2Login" src="public\images\logo2.png" id="imagem2">
+    <!-- Logo Panpedia -->
+        <img class="logoLogin" src="public\images\panpedia_logo_adobe_express.svg" id="imagem1">
+        <div class="conteudoLogin">
+            <div class="loginConteudoLogin">
+                <!-- botões para o usuário entrar na página como um colabordor ou da governança de dados -->
+                <h2>Entrar como: </h2>
+                <a href="/busca/colaborador"><button class="botaoLogin" id="botaoCol"><img src="public\images\botaoLoginCol.svg" class="botaoLoginImg"></button></a>
+                <h2>ou</h2>
+                <a href="/busca/governanca"><button class="botaoLogin" id="botaoGov"><img src="public\images\botaoLoginGov.svg"  class="botaoLoginImg"></button></a>
+            </div>
+        </div>
+
+        <!-- Elementos do background do design -->
+    <div>
+        <div id="triangulo1Login" class="triangulo"></div>
+        <div id="triangulo2Login" class="triangulo"></div>
+        <div id="triangulo3Login" class="triangulo"></div>
+        <div id="triangulo4Login" class="triangulo"></div>
+        <div id="triangulo5Login" class="triangulo"></div>
+    </div>
+</body>
+</html>

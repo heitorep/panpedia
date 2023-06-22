@@ -1,0 +1,21 @@
+<!-- Exibição do menu lateral e definição da função de onClick, usada para exibir ou esconder o menu -->
+<div id="menuLateral" class="menuLateral">
+    <a href="javascript:void(0)" class="botaoFechar" onclick="fecharNav()">&times;</a>
+    <h2 class="procura">O QUE VOCÊ PROCURA?</h2>
+    <!-- guia da sidebar para o usuário acessar diversas páginas do site -->
+    <a href="https://www.google.com" target="_blank">DATA LITERACY</a>
+    <a href="https://www.google.com" target="_blank">DATA LAKE</a>
+    <a href="https://www.google.com" target="_blank">SOLICITAR ACESSO AO DATA LAKE OU SDBX</a>
+    <!-- quando o usuário é da governança, adiciona página de sugestão que é restrito para a governança de dados -->
+    <% if (permissao == "governanca") { %>
+        <a class="botaoAlteracoes" href="/busca/<%= permissao %>/sugestoes" id="pagSug">GOVERNANÇA DE DADOS</a>
+    <% } %>
+    <!-- adiciona botão dark mode -->
+    <h3 class="procura">Dark Mode</h3>
+    <div class="formatacao">
+        <label class="alavanca">
+            <input type="checkbox" id="bolabtn" onclick='funcaoDarkMode()'>
+            <span class="bola botao"></span>
+        </label>
+    </div>
+</div>

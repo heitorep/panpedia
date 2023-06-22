@@ -1,0 +1,337 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.header {
+    display: flex;
+    flex-direction: row;
+    gap: 90px;
+    margin-top: 0px;
+    margin-left: 50px;
+    width: 100%;
+    margin: 0;
+}
+
+.iconeMenu {
+    width: 40px;
+    height: 40px;
+    margin-top: 24px;
+    margin-left: 10px;
+    background: transparent;
+    border: none;
+    color: #00A3FF;
+    cursor: pointer;
+}
+
+#logo {
+    position: absolute;
+    top: 5%;
+    left: 82%;
+    width: 15%;
+    cursor: pointer;
+}
+
+
+.pesquisaDiv {
+    position: absolute;
+    top: 10%;
+    left: 42%;
+    width: 70vw;
+    transform: translate(-50%, -50%);
+    padding: 1px;
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap; /* Adicionado para quebrar a linha quando necessário */
+    background: #FFFFFF;
+    border: 1px solid #DCDCDC;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 100.5px;
+   
+}
+
+#inputBusca {
+    color: rgb(64, 64, 64);
+    text-align: left;
+    margin-top: 20px;
+    margin-left: 10px;
+    margin-bottom: 15px;
+    font-size: 16px;
+    border: none;
+    outline: none;
+    background: transparent;
+
+}
+
+.pesquisaDiv i {
+    margin-bottom: 10px;
+    margin-left: 20px;
+    color: #D9D9D9;
+    font-size: 25px;
+}
+
+#botaoPesquisa{
+    display: none;
+}
+
+#inputBusca ::placeholder {
+    text-align: left;
+    color: rgb(64, 64, 64);
+    opacity: 0.5;
+}
+
+.caminho {
+    gap: 20px;
+    position: absolute;
+    margin-top: 30px;
+    margin-left: 130px;
+    display: flex;
+    align-items: center;
+}
+
+a { 
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    background-color: transparent;
+    border: none;
+    color: #000;
+    cursor: pointer;
+}
+
+.caminho a:hover { 
+    cursor: pointer;
+    transition: 0.4s;
+    color: #616161;
+}
+
+.barraMenu {
+    display: flex;
+    justify-content: space-between;
+    gap: 60px;
+}
+
+.resultados {
+    margin-top: 60px;
+    margin-left: 30px;
+    width: 90%;
+    padding: 10px;
+}
+
+.resultadoItem {
+    border-bottom: 1px solid #000;
+    padding: 10px 20px;
+    transition: background 0.5s;
+
+}
+
+.resultadoItem:hover {
+    background: #d9d9d9;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+.resultadoItem a:hover{
+    font-size: 18px;
+    transition: 0.4s;
+}
+
+.menuLateral {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.menuLateral a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 15px;
+    color: #ffffff;
+    display: block;
+    transition: 0.3s;
+    padding: 8px 8px;
+}
+
+.menuLateral a:hover {
+    color: #f1f1f1;
+    cursor: pointer;
+}
+
+.menuLateral .botaoFechar {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    margin-left: 50px;
+    cursor: pointer;
+}
+
+.procura{
+    color: #ffffff;
+    padding: 8px 8px;
+    font-size: 18px;
+    text-align: left;
+}
+
+#proxPag{
+    width: 300px;
+    text-decoration: none;
+    font-family: 'Montserrat';
+    font-size: 15px;
+    background-color: transparent;
+    color: #000;
+    border: none;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    justify-content: space-between;
+}
+
+#proxPag:hover{
+    cursor: pointer;
+    transition: .4s;
+    color: #696969;
+}
+
+
+#pagAnt{
+    width: 200px;
+    text-decoration: none;
+    font-family: 'Montserrat';
+    font-size: 15px;
+    background-color: transparent;
+    color: #000;
+    border: none;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    justify-content: space-between;
+}
+
+#pagAnt:hover{
+    cursor: pointer;
+    transition: .4s;
+    color: #696969;
+}
+.paginacao {
+    display: flex;
+}
+.formatacao {
+    padding: 25px;
+    margin-left: 25%;
+}
+
+.alavanca {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+  }
+  
+  .alavanca input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  .bola {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  .bola:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  input:checked + .bola {
+    background-color: #2196F3;
+  }
+  
+  input:focus + .bola {
+    box-shadow: 0 0 1px #2196F3;
+  }
+  
+  input:checked + .bola:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+  }
+  
+  .bola.botao {
+    border-radius: 34px;
+  }
+  
+  .bola.botao:before {
+    border-radius: 50%;
+  }
+  .darkMode {
+    background-color: #2a2c38;
+    color: white;
+}
+#imagem3 {
+    position: absolute;
+    top: 5%;
+    left: 82%;
+    width: 15%;
+    cursor: pointer;
+    background-color: #2a2c38;
+}
+.darkMode a {
+    color: white;
+}
+
+.darkMode .resultadoItem:hover{
+    background-color: #424558;
+}
+.darkMode .pesquisa {
+    background-color: #717171;
+    color: #000;
+    border: #717171;
+}
+.darkMode .pesquisaDiv i {
+    color: #424558;
+}
+.darkMode #inputPesquisa::placeholder {
+    text-align: left;
+    color: #000;
+    opacity: 0.9;
+}
+
+.darkMode #pagAnt {
+    color: #D9D9D9;
+}
+
+.darkMode #pagAnt:hover{
+    cursor: pointer;
+    transition: .4s;
+    color: #616161;
+}
+
+.darkMode #proxPag {
+    color: #D9D9D9;
+}
+
+.darkMode #proxPag:hover {
+    cursor: pointer;
+    transition: .4s;
+    color:#616161;
+}

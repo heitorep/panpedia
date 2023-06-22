@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Panpedia</title>
+    <!-- Link com o script dos ícones do site Fontawesome -->
+    <script src="https://kit.fontawesome.com/9b32426a3d.js" crossorigin="anonymous"></script>
+    <!-- Definição do ícone da página -->
+    <link rel="short icon" href="/public/images/123.png" type="image/x-icon">
+    <!-- Inclusão do arquivo CSS externo -->
+    <link rel="stylesheet" type="text/css" href="/public/css/styleSugestoes.css">
+    <!-- Inclusão da biblioteca Jquery externo -->
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js" crossorigin="anonymous"></script>
+    <!-- Inclusão do arquivo Javascript externo -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+    <!-- Exibição do menu lateral e definição da função de onClick, usada para exibir ou esconder o menu -->
+    <%- include('../atalhos/sidebar')%>
+
+            <!-- Exibição do botão de abrir o side bar e definição da função onClick -->
+        <div class="barraMenu">
+                <button class="iconeMenu" onclick="abrirNav()"><i class="fa-sharp fa-solid fa-bars fa-2x"></i></button>
+        </div>
+    <!-- Exibição da header com barra de pesquisa e logo do Panpedia -->
+    <%- include('../atalhos/header')%>
+    <!-- Exibição dos breadcrumbs, demonstrando o caminho do usuário. -->
+    <div class="caminho">
+        <a href="/busca/<%=permissao%>">Página Inicial</a>
+        <p>></p>
+        <a>Alterações sugeridas</a>
+    </div>
+    <div id="alteracao">
+        <% if (model.length > 0) { %>
+            <% for (const alteracao of model) { %>
+                <div class="card">
+                    <p><strong> Tabela: </strong><%= alteracao.TABELA %><br>
+                    <strong>Nome do funcionário: </strong><%= alteracao.NOME %><br>
+                    <strong>Sugerido em: </strong><%= alteracao.DATA %><br>
+                    <strong>Campo: </strong><%= alteracao.CAMPO %><br>
+                    <strong>Alteração: </strong><%= alteracao.ALTERACAO %></p>
+                    <input type="hidden" name="ID_ALTERACAO" value="<%= alteracao.ID_ALTERACAO%>">
+                    <% if (owners.includes(alteracao.NOME)) { %>
+                        <div class="coroa" title="Essa alteração foi sugerida por um owner">
+                            <i class="fa-sharp fa-solid fa-crown"></i>
+                        </div>
+                    <% } %>
+                    <a href="/busca/<%= permissao %>/analisado?ID_ALTERACAO=<%= alteracao.ID_ALTERACAO %>"><button class="fechar">Fechar Alteração</button></a>
+                </div>
+            <% } %>
+        <% } %>
+    </div>
+</body>
+<!-- Atrela o script do JS ao HTML -->
+<script src="busca.js"></script>
+<script src="/public/js/script.js"></script>
+</body>
+</html>
+

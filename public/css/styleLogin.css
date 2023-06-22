@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+}
+html, body {
+    height: 100%;
+    overflow-x: hidden;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+
+.pesquisaItens {
+    flex-direction: column;
+    justify-content: center;
+}
+
+.logoLogin {
+    width: 18%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10%;
+}
+.logo2Login {
+    position: relative;
+    width: 60px;
+    height: 70px;
+    left: 95%;
+    top: 5%;
+}
+
+.triangulo {
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-color: transparent transparent rgba(0, 163, 255, 0.27) transparent;
+  }
+  
+  #triangulo1Login {
+    bottom: 23%;
+    left: -7vw;
+    border-width: 0vw 20vw 25vh 0vw;
+    transform: rotate(75deg);
+  }
+  
+  #triangulo2Login {
+    bottom: 47%;
+    left: -20%;
+    border-width: 0 17.5vw 50vh 22vw;
+    transform: rotate(72deg);
+  }
+  
+  #triangulo3Login {
+    bottom: 0;
+    right: 0;
+    border-width: 0 0vw 30vh 12.5vw;
+  }
+  
+  #triangulo4Login {
+    bottom: 0;
+    right: 4.4%;
+    border-width: 0 2vw 15vh 15vw;
+  }
+  
+  #triangulo5Login {
+    top: 0%;
+    left: 0%;
+    border-width: 0 0vw 37.5vh 35vw;
+    transform: rotate(180deg);
+  }
+
+.conteudoLogin {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    padding: 10px;
+    gap: 20px
+}
+
+.loginConteudoLogin {
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.botaoLogin {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+}
+.botaoLoginImg {
+    width: 300px;
+}
+.darkMode {
+    background-color: #2a2c38;
+    color: white;
+}

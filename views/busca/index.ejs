@@ -1,0 +1,54 @@
+<!-- Definição do tipo de documento HTML e configuração do idioma -->
+<!DOCTYPE html>
+<html>
+<head lang="pt">
+    <!-- Meta tag para codificação de caracteres -->
+    <meta charset="UTF-8">
+    <!-- Meta tag para compatibilidade com o Internet Explorer -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Título da página -->
+    <title>Panpedia</title>
+    <!-- Inclusão da biblioteca Jquery externo -->
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js" crossorigin="anonymous"></script>
+    <!-- Inclusão do arquivo CSS externo -->
+    <link rel="stylesheet" href="/public/css/styleBusca.css">
+    <!-- Inclusão do arquivo de ícones externo -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+    <!-- Definição do ícone da página -->
+    <link rel="short icon" href="/public/images/123.png" type="image/x-icon">
+    <!-- Inclusão do arquivo CSS externo -->
+    <script src="/public/js/script.js"></script>
+
+    <!-- Inclusão do arquivo de script externo -->
+    <script src="https://kit.fontawesome.com/9b32426a3d.js" crossorigin="anonymous"></script>
+
+<body class="imagemFundo">
+    <!-- Cabeçalho da página -->
+    <header class="header">
+        <img class="logo2" src="/public/images/logo2.png" id="imagem2">
+        <img src="/public/images/logoMinPanDarkMode.svg" class="logo2" id="imagem4">
+    <!-- Exibição do menu lateral e definição da função de onClick, usada para exibir ou esconder o menu -->
+    <%- include('../atalhos/sidebar')%>
+        <!-- Exibição do botão de abrir o side bar e definição da função onClick -->
+        <div class="barraMenu">
+            <button class="iconeMenu" onclick="abrirNav()"><i class="fa-sharp fa-solid fa-bars fa-2x"></i></button>
+        </div>
+
+    </header>
+
+    <!-- Barra de pesquisa -->
+    <img class="logo" src="/public/images/panpedia_logo_adobe_express.svg" id="imagem1">
+    <img class="logo" src="/public/images/LogoPanpediaDarkmode.svg" id="imagem3">
+    <form class="pesquisa" method="get" action="/busca/<%= permissao %>/saida/0">
+        <i class="fa-solid fa-magnifying-glass fa-2x"></i>
+        <input type="text" name="pesquisa" id="inputPesquisa" placeholder="Digite sua busca...">
+        <button id="botaoPesquisa" type="submit" required>Buscar</button>
+    </form>
+
+    <!-- background -->
+    <div id="triangulo1"></div>
+    <div id="triangulo2"></div>
+    <div id="triangulo4"></div>
+    <!-- <div id="triangulo5"></div> -->
+</body>
+</html>
